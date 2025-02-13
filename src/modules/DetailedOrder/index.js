@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Descriptions, Divider, List, Button } from 'antd';
-import dishes from '../../data/dishes.json';
-
+import dishes from '../../assets/data/dishes.json';
 const DetailedOrder = () => {
     return (<Card title ='Order Title' style={{margin: 20}}>
         <Descriptions bordered column={{lg: 1, md: 1, sm: 1}}>
