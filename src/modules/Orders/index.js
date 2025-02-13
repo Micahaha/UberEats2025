@@ -1,7 +1,23 @@
-import orders from './assets/data/orders.json';
+import orders from '../../assets/data/orders.json';
 import {Card, Table, Tag} from 'antd';
+import React from 'react';
+
 
 const Orders = () => {
+    const renderOrderStatus = (orderStatus) => {
+        if (orderStatus === 'Accepted') 
+            {
+            return <Tag color={'green'}>{orderStatus}</Tag>
+            }
+        if (orderStatus === 'Pending') 
+            {
+            return <Tag color={'orange'}>{orderStatus}</Tag>
+            }
+        if (orderStatus === 'Declined') 
+            {
+            return <Tag color={'red'}>{orderStatus}</Tag>
+            }
+    };
 
     const tableColumns = [
         {
@@ -20,7 +36,7 @@ const Orders = () => {
             title: 'Price',
             dataIndex: 'price',
             key: 'price',
-            render: (price) =>  `$ {price} $`
+            render: (price) => `${price} $`
         },
         {
             title: 'Status',
@@ -33,7 +49,10 @@ const Orders = () => {
         <Card title={'Orders'} style={{margin: 20}}>
             <Table 
             dataSource={orders}
-            columns={tableColumns}/>
+            columns={tableColumns}
+            rowkey="orderID"/>
         </Card>
     )
 };
+
+export default Orders;
