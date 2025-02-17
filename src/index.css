@@ -1,24 +1,24 @@
 .ant-btn-primary {
-  background-color: #3fc060 !important; /* You can change this color to your desired one */
-  border-color: #3fc060 !important;  
-}
-
-
-.ant-pagination-item  {
-  border-color: #3fc060 !important;
-  color: #3fc060 !important;
-}
-.ant-paginiation-item-active {
+  background-color: #3fc060 !important;
   border-color: #3fc060 !important;
 }
 
-.ant-pagination .ant-pagination-item-active{
+.ant-pagination-item-active {
   border-color: #3fc060 !important;
+}
+
+li.ant-pagination-item-active a {
   color: #3fc060 !important;
 }
-.ant-pagination .ant-pagination-item-active a {
-  color: #3fc060 !important;
-}
+
 .ant-menu-item-selected {
   background-color: #3fc060 !important;
+}
+
+.ant-menu-item-selected span {
+  color: white !important;
+}
+
+.ant-menu-item-active {
+  color: #3fc060 !important;
 }

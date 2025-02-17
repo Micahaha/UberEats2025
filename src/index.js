@@ -1,19 +1,15 @@
-import { ConfigProvider } from 'antd';
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import './index.css';
 import App from './App';
 import 'antd/dist/reset.css';
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
   <React.StrictMode>
-    <ConfigProvider theme={{ hashed: false }}>
-    <App />
-  </ConfigProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
-
