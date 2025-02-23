@@ -24,7 +24,7 @@ const Settings = () => {
           <Input placeholder="Enter restaurant name here" />
         </Form.Item>
         <Form.Item label="Restaurant Address" required>
-          <GooglePlacesAutocomplete apiKey="AIzaSyB-JqrwAKUE3SrEzZiHnfSzAhgg883y7mo" selectProps={{
+          <GooglePlacesAutocomplete  selectProps={{
             value: address,
             onChange: getAddressLatLng,
           }} />
@@ -32,6 +32,9 @@ const Settings = () => {
         <Form.Item>
           <Button type="primary">Submit</Button>
         </Form.Item>
+        <Form>
+          <span>{coordinates?.lat} - {coordinates?.lng} </span>
+        </Form>
       </Form>
     </Card>
   );
